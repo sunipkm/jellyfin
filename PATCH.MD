@@ -18,6 +18,9 @@
     - In the Jellyfin remote repository ([github](https://github.com/jellyfin/jellyfin)), check the commit hash of the relevant release tag.
     - Switch to and pull the relevant release branch in local.
     - Checkout the commit hash retrieved previously.
+    - Copy `file*.patch` and `PATCH.MD` from a previous branch into this detached head: `git checkout <branch> <file>`.
+    - Apply the patches and verify the changes.
+
 5. To build: Follow all the procedures in the `README.MD` for the relevant branch and install the required `.NET` runtimes. In a `cmd` shell, execute
     ```cmd
     dotnet build --configuration Release
