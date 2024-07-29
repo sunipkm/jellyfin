@@ -1,0 +1,53 @@
+diff --git a/Emby.Server.Implementations/Library/LiveStreamHelper.cs b/Emby.Server.Implementations/Library/LiveStreamHelper.cs
+index 0ebfe3ae7..5b6164e26 100644
+--- a/Emby.Server.Implementations/Library/LiveStreamHelper.cs
++++ b/Emby.Server.Implementations/Library/LiveStreamHelper.cs
+@@ -157,19 +157,19 @@ namespace Emby.Server.Implementations.Library
+ 
+                     if (width >= 3000)
+                     {
+-                        videoStream.BitRate = 30000000;
++                        videoStream.BitRate = 2500000;
+                     }
+                     else if (width >= 1900)
+                     {
+-                        videoStream.BitRate = 20000000;
++                        videoStream.BitRate = 1000001;
+                     }
+                     else if (width >= 1200)
+                     {
+-                        videoStream.BitRate = 8000000;
++                        videoStream.BitRate = 750000;
+                     }
+                     else if (width >= 700)
+                     {
+-                        videoStream.BitRate = 2000000;
++                        videoStream.BitRate = 420001;
+                     }
+                 }
+ 
+diff --git a/MediaBrowser.Model/Dlna/ResolutionNormalizer.cs b/MediaBrowser.Model/Dlna/ResolutionNormalizer.cs
+index 5d7daa81a..6ef24944b 100644
+--- a/MediaBrowser.Model/Dlna/ResolutionNormalizer.cs
++++ b/MediaBrowser.Model/Dlna/ResolutionNormalizer.cs
+@@ -10,13 +10,13 @@ namespace MediaBrowser.Model.Dlna
+         private static readonly ResolutionConfiguration[] Configurations =
+             new[]
+             {
+-                new ResolutionConfiguration(426, 320000),
+-                new ResolutionConfiguration(640, 400000),
+-                new ResolutionConfiguration(720, 950000),
+-                new ResolutionConfiguration(1280, 2500000),
+-                new ResolutionConfiguration(1920, 4000000),
+-                new ResolutionConfiguration(2560, 20000000),
+-                new ResolutionConfiguration(3840, 35000000)
++                 new ResolutionConfiguration(426, 420000),
++                 new ResolutionConfiguration(640, 420001),
++                 new ResolutionConfiguration(720, 600000),
++                 new ResolutionConfiguration(1280, 750001),
++                 new ResolutionConfiguration(1920, 1500001),
++                 new ResolutionConfiguration(2560, 3000001),
++                 new ResolutionConfiguration(3840, 4000001)
+             };
+ 
+         public static ResolutionOptions Normalize(
