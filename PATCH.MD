@@ -32,7 +32,7 @@ git checkout <branch> <path/to/file>
 
 ## Jellyfin Web
 1. The file to be patched is `src/components/qualityOptions.js`. Follow the same procedures described for the main `jellyfin` app. The patch is provided as `file1.patch` from the diff between `v10.8.9` and `v10.8.9_lbr`.
-2. Refer to documentation for building.
+2. Refer to documentation for building, use `npm run build:production` to build the production version.
 3. Copy the built files from `jellyfin-web/dist` directory to a directory named `jellyfin-web` in the root of the directory where all the built files were copied for `jellyfin` app and `jellyfin-ffmpeg`.
 
 ## Jellyfin Tray App
